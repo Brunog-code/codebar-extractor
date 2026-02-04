@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, type MouseEvent } from "react";
+import toast from "react-hot-toast";
 import { FiCopy, FiX } from "react-icons/fi";
 
 interface IModalProps {
@@ -21,10 +22,10 @@ export function Modal({ setShowModal, codeBar }: IModalProps) {
     navigator.clipboard
       .writeText(codeBar)
       .then(() => {
-        alert("Código copiado!");
+        toast.success("Copiado para a área de transferência");
       })
       .catch(() => {
-        alert("Não foi possível copiar o código.");
+        toast.error("Erro ao copiar");
       });
   };
 
