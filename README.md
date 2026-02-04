@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📑 Barcode Extractor
 
-## Getting Started
+👉 **[Acesse o projeto aqui](https://codebar-extractor.vercel.app/)**
 
-First, run the development server:
+Aplicação web para extração automática do código de barras de boletos bancários a partir de arquivos **PDF** ou **imagem**. O usuário faz o upload do boleto e recebe o código de barras pronto para copiar e colar no pagamento, eliminando erros de digitação.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Tecnologias Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Tecnologia      | Badge                                                                                                              |
+| :-------------- | :----------------------------------------------------------------------------------------------------------------- |
+| **Next.js**     | ![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=nextdotjs&logoColor=white)              |
+| **TypeScript**  | ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)    |
+| **TailwindCSS** | ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white) |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🎯 Objetivo do Projeto
 
-To learn more about Next.js, take a look at the following resources:
+Facilitar o pagamento de boletos bancários, extraindo o código de barras de arquivos enviados pelo usuário:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. O usuário faz upload de um **PDF** ou **imagem** do boleto
+2. O sistema processa o arquivo e extrai o código de barras
+3. O código é exibido para o usuário copiar e colar no app do banco
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ✨ Funcionalidades em Destaque
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 📤 Upload Inteligente
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Aceita arquivos **.pdf**, **.jpg**, **.jpeg** e **.png**
+- Validação automática de formato
+- Interface intuitiva e responsiva
+
+### 🧠 Extração Automática
+
+- Processamento do boleto e detecção do código de barras
+- Exibição do código pronto para copiar
+
+
+---
+
+## 🏗️ Arquitetura do Projeto
+
+- **Frontend:** Next.js + React + TypeScript + TailwindCSS
+- **Upload:** Validação e preview de arquivos no frontend
+- **Extração:** (Implementação futura) API para processamento e OCR do boleto
+
+---
