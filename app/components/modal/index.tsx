@@ -17,6 +17,17 @@ export function Modal({ setShowModal, codeBar }: IModalProps) {
     }
   };
 
+  const handleCopy = () => {
+    navigator.clipboard
+      .writeText(codeBar)
+      .then(() => {
+        alert("Código copiado!");
+      })
+      .catch(() => {
+        alert("Não foi possível copiar o código.");
+      });
+  };
+
   return (
     <section
       className="fixed inset-0 z-50 flex justify-center items-center bg-black/70 backdrop-blur-sm "
@@ -33,6 +44,7 @@ export function Modal({ setShowModal, codeBar }: IModalProps) {
           type="button"
           aria-label="Copiar código de barras"
           className="mt-4 p-2 rounded-full bg-blue-50 hover:bg-blue-100 border border-blue-200 text-blue-700 shadow transition-colors cursor-pointer"
+          onClick={handleCopy}
         >
           <FiCopy size={30} />
         </button>
