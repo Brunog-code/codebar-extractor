@@ -38,7 +38,7 @@ export function Modal({ setShowModal, codeBar }: IModalProps) {
         ref={ref}
         className="bg-white bg-opacity-100 shadow-2xl rounded-2xl  w-11/12 md:w-10/12 mx-4 p-8 flex flex-col items-center border border-slate-200 relative"
       >
-        <span className="font-semibold text-sm text-slate-800 break-words text-center p-1">
+        <span className="font-semibold text-sm text-slate-800  text-center p-1 break-all max-w-full">
           {codeBar}
         </span>
         <button
