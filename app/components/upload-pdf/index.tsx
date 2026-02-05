@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { FiX } from "react-icons/fi";
 import { useRef } from "react";
 import { Modal } from "../modal";
+import { Loader2 } from "lucide-react";
 
 interface In8nResponseWebhook {
   codebar: string;
@@ -180,7 +181,14 @@ export function UploadPdf() {
             disabled={!file || isLoading}
             className=" w-11/12 sm:w-9/12 lg:w-6/12 bg-blue-600 hover:bg-blue-700 text-white rounded-xl mt-4 cursor-pointer"
           >
-            {isLoading ? "Enviando...." : "Enviar"}
+            {isLoading ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                "Enviando...."
+              </>
+            ) : (
+              "Enviar"
+            )}
           </Button>
         </form>
       </div>
