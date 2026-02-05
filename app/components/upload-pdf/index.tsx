@@ -184,7 +184,7 @@ export function UploadPdf() {
             {isLoading ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                "Enviando...."
+                <span>Enviando....</span>
               </>
             ) : (
               "Enviar"
